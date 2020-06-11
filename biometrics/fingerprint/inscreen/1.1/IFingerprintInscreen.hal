@@ -19,6 +19,8 @@ package vendor.lineage.biometrics.fingerprint.inscreen@1.1;
 import vendor.lineage.biometrics.fingerprint.inscreen@1.0;
 
 interface IFingerprintInscreen extends vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen{
-
+    getHbmOffDelay() generates (int32_t delayOff);
+    getHbmOnDelay() generates (int32_t delayOn);
+    supportsAlwaysOnHBM() generates (bool status);
     switchHbm(bool enabled);
 };
